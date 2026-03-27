@@ -5,7 +5,7 @@ import { authValidator } from "../middleware/validators.js";
 
 const router = express.Router();
 
-router.post("/register", protectedAuth, authValidator, createUser);
+router.post("/register", authValidator, createUser);
 router.post("/login", login);
 
 export default router;
