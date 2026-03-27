@@ -2,12 +2,14 @@ import express from "express";
 import { sequelize } from "./models/index.js";
 import authRouter from "./routes/auth.routes.js";
 import productRouter from "./routes/auth.routes.js";
+import orderRouter from "./routes/order.routes.js";
 
 const PORT = 5000;
 const app = express();
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/product", productRouter);
+app.use("/api/v1/orders", orderRouter);
 
 const startServer = async () => {
   try {
