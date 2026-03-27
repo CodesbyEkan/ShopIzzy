@@ -15,7 +15,7 @@ export const protectedAuth = (req, res, next) => {
     const token = authorization.split(" ")[1];
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded.payload;
+    req.user = decoded;
     next();
   } catch (err) {
     console.error("error with authorization", err.message);

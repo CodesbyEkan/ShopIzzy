@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import {sequelize} from "../config/db.js";
+import { sequelize } from "../config/db.js";
 
 const Product = sequelize.define("Product", {
   id: {
@@ -7,7 +7,7 @@ const Product = sequelize.define("Product", {
     defaultValue: DataTypes.UUIDV4,
     primaryKey: true,
   },
-  name: DataTypes.STRING,
+  name: { type: DataTypes.STRING, allowNull: false, unique: true },
   price: DataTypes.FLOAT,
   stock: DataTypes.INTEGER,
 });

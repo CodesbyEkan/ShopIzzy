@@ -3,7 +3,17 @@ import { Product } from "../models/index.js";
 export const createProduct = async (req, res) => {
   try {
     const { name, price, stock } = req.body;
-    const product = await Product.create({ name, price, stock });
+    const [item, product] = await Product.findOrCreate({
+      where: { name: req.body.name },
+      defaults: { name, price, stock },
+    });
+    if (!product) {
+      return res.status(400).json({
+        status: false,
+        message: "Duplicate names not allowed.",
+      });
+    }
+    console.log(item);
     res.status(200).json({ status: true, product });
   } catch (err) {
     console.error("Error creating product.", err.message);

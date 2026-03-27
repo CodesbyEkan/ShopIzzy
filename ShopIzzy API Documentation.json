@@ -1,0 +1,1098 @@
+{
+  "info": {
+    "_postman_id": "1a85d09f-fa7e-4e97-968e-60bac7d120d7",
+    "name": "ShopIzzy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46612948"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "John Doe",
+              "type": "text",
+              "uuid": "5745958d-06df-43ce-84d3-eba8931131a1"
+            },
+            {
+              "key": "email",
+              "value": "johndoe@mail.com",
+              "type": "text",
+              "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+            },
+            {
+              "key": "password",
+              "value": "johndoe123",
+              "type": "text",
+              "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/auth/register",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "auth", "register"]
+        },
+        "description": "Endpoint to create a user."
+      },
+      "response": [
+        {
+          "name": "Register User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "John Doe",
+                  "type": "text",
+                  "uuid": "5745958d-06df-43ce-84d3-eba8931131a1"
+                },
+                {
+                  "key": "email",
+                  "value": "johndoe@mail.com",
+                  "type": "text",
+                  "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+                },
+                {
+                  "key": "password",
+                  "value": "johndoe123",
+                  "type": "text",
+                  "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/auth/register",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "auth", "register"]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "303"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"12f-oVGkeCSQ7zZcJs1ME7C+E5RdKkg\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 17:59:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"message\": \"user created successfully\",\n    \"data\": {\n        \"id\": \"0c2b8272-8cbf-4258-bb5b-9588af43cf71\",\n        \"email\": \"johndoe@mail.com\",\n        \"name\": \"John Doe\",\n        \"password\": \"$2b$10$gfonRySziIQjita4ndQVpemQdvQh.I13kw8f3NSyt5N5Dy91qq1Fe\",\n        \"updatedAt\": \"2026-03-27T17:59:56.712Z\",\n        \"createdAt\": \"2026-03-27T17:59:56.712Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "johndoe@mail.com",
+              "type": "text",
+              "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+            },
+            {
+              "key": "password",
+              "value": "johndoe123",
+              "type": "text",
+              "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/auth/login",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "auth", "login"]
+        }
+      },
+      "response": [
+        {
+          "name": "Login User",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "johndoe@mail.com",
+                  "type": "text",
+                  "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+                },
+                {
+                  "key": "password",
+                  "value": "johndoe123",
+                  "type": "text",
+                  "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/auth/login",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "auth", "login"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "417"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1a1-jn00QPPPma5D3U44L/fhvBdSGA0\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 18:09:37 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"message\": \"User successfully logged in.\",\n    \"userToken\": {\n        \"id\": \"0c2b8272-8cbf-4258-bb5b-9588af43cf71\",\n        \"name\": \"John Doe\",\n        \"email\": \"johndoe@mail.com\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Product 1",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "John Doe Novel",
+              "type": "text",
+              "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+            },
+            {
+              "key": "price",
+              "value": "123",
+              "type": "text",
+              "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+            },
+            {
+              "key": "stock",
+              "value": "25",
+              "type": "text",
+              "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/product",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "product"]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Product 1",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "John Doe Novel",
+                  "type": "text",
+                  "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+                },
+                {
+                  "key": "price",
+                  "value": "123",
+                  "type": "text",
+                  "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+                },
+                {
+                  "key": "stock",
+                  "value": "25",
+                  "type": "text",
+                  "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/product",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "product"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "200"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c8-TwRiLuizgr44eCwukdTpmvmyYPM\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 18:42:27 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"product\": {\n        \"id\": \"332ac9a8-466e-4cf1-ba9a-c76d598bd8b0\",\n        \"name\": \"John Doe Novel\",\n        \"price\": \"123\",\n        \"stock\": \"25\",\n        \"updatedAt\": \"2026-03-27T18:42:27.539Z\",\n        \"createdAt\": \"2026-03-27T18:42:27.539Z\"\n    }\n}"
+        },
+        {
+          "name": "Create Product 2",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "John Doe Novel",
+                  "type": "text",
+                  "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+                },
+                {
+                  "key": "price",
+                  "value": "123",
+                  "type": "text",
+                  "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+                },
+                {
+                  "key": "stock",
+                  "value": "25",
+                  "type": "text",
+                  "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/product",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "product"]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "57"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"39-cpS55HKjlYWw3iR8jQ05+WHYRI4\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 19:12:55 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": false,\n    \"message\": \"Duplicate names not allowed.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Product 2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "John Doe Diary",
+              "type": "text",
+              "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+            },
+            {
+              "key": "price",
+              "value": "231",
+              "type": "text",
+              "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+            },
+            {
+              "key": "stock",
+              "value": "20",
+              "type": "text",
+              "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/product",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "product"]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Product 2",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "John Doe Diary",
+                  "type": "text",
+                  "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+                },
+                {
+                  "key": "price",
+                  "value": "231",
+                  "type": "text",
+                  "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+                },
+                {
+                  "key": "stock",
+                  "value": "20",
+                  "type": "text",
+                  "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/product",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "product"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "200"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c8-4TRUGqrKJLbBVDQMzb6MXsWxLpw\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 18:44:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"product\": {\n        \"id\": \"67f4ad83-6b28-4158-91a4-0a618b6c5d6a\",\n        \"name\": \"John Doe Diary\",\n        \"price\": \"231\",\n        \"stock\": \"20\",\n        \"updatedAt\": \"2026-03-27T18:44:24.107Z\",\n        \"createdAt\": \"2026-03-27T18:44:24.107Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Product 3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "John Doe Duplex",
+              "type": "text",
+              "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+            },
+            {
+              "key": "price",
+              "value": "3210",
+              "type": "text",
+              "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+            },
+            {
+              "key": "stock",
+              "value": "1",
+              "type": "text",
+              "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/product",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "product"]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Product 3",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "name",
+                  "value": "John Doe Duplex",
+                  "type": "text",
+                  "uuid": "638eee05-cf3d-45dd-870e-916a0177bf49"
+                },
+                {
+                  "key": "price",
+                  "value": "3210",
+                  "type": "text",
+                  "uuid": "2ce0b3d6-c321-444e-8f82-2210c08d8d46"
+                },
+                {
+                  "key": "stock",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/product",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "product"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "201"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"c9-jAFLraR5q5N2K1qj9rEjodCsRjw\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 18:46:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"product\": {\n        \"id\": \"04cb8cdc-5fde-423f-9679-dda9d063b5d8\",\n        \"name\": \"John Doe Duplex\",\n        \"price\": \"3210\",\n        \"stock\": \"1\",\n        \"updatedAt\": \"2026-03-27T18:46:24.292Z\",\n        \"createdAt\": \"2026-03-27T18:46:24.292Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Products",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "stock",
+              "value": "25",
+              "type": "text",
+              "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/product",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "product"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Products",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "stock",
+                  "value": "25",
+                  "type": "text",
+                  "uuid": "589306ee-3252-4c86-a9f8-2aae6c0d6a0b"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/product",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "product"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "884"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"374-Aw8I32UUZYKC90uXXJahUP+N0no\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 19:17:22 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"products\": [\n        {\n            \"id\": \"04cb8cdc-5fde-423f-9679-dda9d063b5d8\",\n            \"name\": \"John Doe Duplex\",\n            \"price\": 3210,\n            \"stock\": 1,\n            \"createdAt\": \"2026-03-27T18:46:24.000Z\",\n            \"updatedAt\": \"2026-03-27T18:46:24.000Z\"\n        },\n        {\n            \"id\": \"332ac9a8-466e-4cf1-ba9a-c76d598bd8b0\",\n            \"name\": \"John Doe Novel\",\n            \"price\": 123,\n            \"stock\": 25,\n            \"createdAt\": \"2026-03-27T18:42:27.000Z\",\n            \"updatedAt\": \"2026-03-27T18:42:27.000Z\"\n        },\n        {\n            \"id\": \"67b61613-ed44-4f14-992d-d92f0f014da9\",\n            \"name\": \"John Doe Novel\",\n            \"price\": 123,\n            \"stock\": 25,\n            \"createdAt\": \"2026-03-27T18:47:07.000Z\",\n            \"updatedAt\": \"2026-03-27T18:47:07.000Z\"\n        },\n        {\n            \"id\": \"67f4ad83-6b28-4158-91a4-0a618b6c5d6a\",\n            \"name\": \"John Doe Diary\",\n            \"price\": 231,\n            \"stock\": 20,\n            \"createdAt\": \"2026-03-27T18:44:24.000Z\",\n            \"updatedAt\": \"2026-03-27T18:44:24.000Z\"\n        },\n        {\n            \"id\": \"87c52e51-a6d6-42bd-8225-5d318c930734\",\n            \"name\": \"John Doe Novel\",\n            \"price\": 123,\n            \"stock\": 25,\n            \"createdAt\": \"2026-03-27T18:57:54.000Z\",\n            \"updatedAt\": \"2026-03-27T18:57:54.000Z\"\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Add Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/orders",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "orders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Orders",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Add  to cart",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "productId",
+              "value": "332ac9a8-466e-4cf1-ba9a-c76d598bd8b0",
+              "type": "text",
+              "uuid": "c07437ed-9c55-465f-941a-faf6f740c267"
+            },
+            {
+              "key": "quantity",
+              "value": "5",
+              "type": "text",
+              "uuid": "905ba21a-5235-4837-9e68-cc54219fbaa9"
+            }
+          ]
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/cart",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "cart"]
+        }
+      },
+      "response": [
+        {
+          "name": "Add  to cart",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "productId",
+                  "value": "332ac9a8-466e-4cf1-ba9a-c76d598bd8b0",
+                  "type": "text",
+                  "uuid": "c07437ed-9c55-465f-941a-faf6f740c267"
+                },
+                {
+                  "key": "quantity",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "905ba21a-5235-4837-9e68-cc54219fbaa9"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/cart",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "cart"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "228"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e4-PFtR2t7v48Fgp/rhAGGt/ZPaUSU\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 21:26:42 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Added to cart\",\n    \"item\": {\n        \"UserId\": \"0c2b8272-8cbf-4258-bb5b-9588af43cf71\",\n        \"ProductId\": \"332ac9a8-466e-4cf1-ba9a-c76d598bd8b0\",\n        \"quantity\": \"5\",\n        \"updatedAt\": \"2026-03-27T21:26:42.511Z\",\n        \"createdAt\": \"2026-03-27T21:26:42.511Z\"\n    }\n}"
+        },
+        {
+          "name": "Add  to cart",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "productId",
+                  "value": "04cb8cdc-5fde-423f-9679-dda9d063b5d8",
+                  "type": "text",
+                  "uuid": "c07437ed-9c55-465f-941a-faf6f740c267"
+                },
+                {
+                  "key": "quantity",
+                  "value": "3",
+                  "type": "text",
+                  "uuid": "905ba21a-5235-4837-9e68-cc54219fbaa9"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:5000/api/v1/cart",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "cart"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "228"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"e4-Egyq+KQaVpo2OJNwBEVbtHTYtKc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 21:28:02 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"Added to cart\",\n    \"item\": {\n        \"UserId\": \"0c2b8272-8cbf-4258-bb5b-9588af43cf71\",\n        \"ProductId\": \"04cb8cdc-5fde-423f-9679-dda9d063b5d8\",\n        \"quantity\": \"3\",\n        \"updatedAt\": \"2026-03-27T21:28:02.850Z\",\n        \"createdAt\": \"2026-03-27T21:28:02.850Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Cart",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "Get Cart",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBjMmI4MjcyLThjYmYtNDI1OC1iYjViLTk1ODhhZjQzY2Y3MSIsIm5hbWUiOiJKb2huIERvZSIsImVtYWlsIjoiam9obmRvZUBtYWlsLmNvbSIsImlhdCI6MTc3NDYzNDk3NywiZXhwIjoxNzc1MjM5Nzc3fQ.h2Y7EKi6_ZlznLR6bXrw5FTQVAWshMIC7ofP7QmIA1c",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:5000/api/v1/cart",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "cart"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "748"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2ec-jzG3ujdp/MG/IkcA97Q/O1IfUz0\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 21:32:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"quantity\": 3,\n        \"createdAt\": \"2026-03-27T21:32:29.000Z\",\n        \"updatedAt\": \"2026-03-27T21:32:29.000Z\",\n        \"UserId\": \"0c2b8272-8cbf-4258-bb5b-9588af43cf71\",\n        \"ProductId\": \"04cb8cdc-5fde-423f-9679-dda9d063b5d8\",\n        \"Product\": {\n            \"id\": \"04cb8cdc-5fde-423f-9679-dda9d063b5d8\",\n            \"name\": \"John Doe Duplex\",\n            \"price\": 3210,\n            \"stock\": 1,\n            \"createdAt\": \"2026-03-27T18:46:24.000Z\",\n            \"updatedAt\": \"2026-03-27T18:46:24.000Z\"\n        }\n    },\n    {\n        \"quantity\": 5,\n        \"createdAt\": \"2026-03-27T21:32:24.000Z\",\n        \"updatedAt\": \"2026-03-27T21:32:24.000Z\",\n        \"UserId\": \"0c2b8272-8cbf-4258-bb5b-9588af43cf71\",\n        \"ProductId\": \"332ac9a8-466e-4cf1-ba9a-c76d598bd8b0\",\n        \"Product\": {\n            \"id\": \"332ac9a8-466e-4cf1-ba9a-c76d598bd8b0\",\n            \"name\": \"John Doe Novel\",\n            \"price\": 123,\n            \"stock\": 25,\n            \"createdAt\": \"2026-03-27T18:42:27.000Z\",\n            \"updatedAt\": \"2026-03-27T18:42:27.000Z\"\n        }\n    }\n]"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "JWT_TOKEN",
+      "value": ""
+    }
+  ]
+}

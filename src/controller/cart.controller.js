@@ -5,11 +5,25 @@ export const addToCart = async (req, res) => {
     const { productId, quantity } = req.body;
 
     const product = await Product.findByPk(productId);
-
     if (!product) {
-      return res
-        .status(404)
-        .json({ status: false, message: "Product not found" });
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    const existingItem = await Cart.findOne({
+      where: {
+        UserId: req.user.id,
+        ProductId: productId,
+      },
+    });
+
+    if (existingItem) {
+      existingItem.quantity += quantity;
+      await existingItem.save();
+
+      return res.json({
+        message: "Cart updated",
+        item: existingItem,
+      });
     }
 
     const item = await Cart.create({
@@ -18,13 +32,21 @@ export const addToCart = async (req, res) => {
       quantity,
     });
 
-    res.status(200).json({
-      message: "Product added to cart",
+    res.json({
+      message: "Added to cart",
       item,
-      productPrice: product.price,
-      total: product.price * quantity,
     });
   } catch (err) {
-    console.error("Error creating cart.", err.message);
+    console.error(err);
+    res.status(500).json({ message: "Error adding to cart" });
   }
+};
+
+export const getCart = async (req, res) => {
+  const items = await Cart.findAll({
+    where: { UserId: req.user.id },
+    include: Product,
+  });
+
+  res.json(items);
 };

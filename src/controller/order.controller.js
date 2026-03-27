@@ -66,6 +66,6 @@ export const getMyOrders = async (req, res) => {
 
     res.json(orders);
   } catch (err) {
-    console.error("Error creating order,", err.message);
+    console.error("Error getting orders", err.message);
   }
 };
